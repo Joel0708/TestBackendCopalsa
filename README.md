@@ -17,7 +17,7 @@ Crear tarea
 
 
 Listar tareas
-• 	Método: GET (según buenas prácticas REST, aunque la consigna permitía POST)
+• 	Método: GET 
 • 	Ruta: /listar-tareas
 • 	Respuesta: [ { "id": 1, "titulo": "Aprender Nest", "descripcion": "Repasar módulos", "fechaCreacion": "2025-11-29T11:15:00.000Z" } ]
 
