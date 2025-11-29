@@ -12,7 +12,7 @@ El servidor quedará disponible en http://localhost:3000
 Crear tarea
 • 	Método: POST
 • 	Ruta: /crear-tareas
-• 	Body (JSON): { "titulo": "Aprender Nest", "descripcion": "Repasar módulos" }
+• 	Body (JSON): { "titulo": "Prueba de titulo 1", "descripcion del titulo 1": "Repasar módulos" }
 • 	Respuesta: { "mensaje": "Tarea registrada", "id": 1 }
 
 
@@ -21,8 +21,8 @@ Listar tareas
 • 	Ruta: /listar-tareas
 • 	Respuesta: [ { "id": 1, "titulo": "Aprender Nest", "descripcion": "Repasar módulos", "fechaCreacion": "2025-11-29T11:15:00.000Z" } ]
 
-## Base de datos
-Se utiliza SQLite como base local.
+## MI Base de datos
+Utilicé SQLite como base local.
 El archivo  se genera automáticamente en la raíz del proyecto al iniciar la aplicación.
 Modelo de la tabla
 CREATE TABLE tareas ( id INTEGER PRIMARY KEY AUTOINCREMENT, titulo TEXT NOT NULL, descripcion TEXT, fechaCreacion TEXT DEFAULT CURRENT_TIMESTAMP );
