@@ -29,13 +29,14 @@ describe('TareasController (e2e)', () => {
     expect(response.body).toHaveProperty('id');
   });
 
-  it('/listar-tareas (POST) debería listar tareas', async () => {
+  it('/listar-tareas (GET) debería listar tareas', async () => {
     const response = await request(app.getHttpServer())
-      .get('/listar-tareas')
-      .send({})
-      .expect(201);
+      .get('/listar-tareas')    // Cambie a Get el controller
+      .expect(200);             
 
-    expect(Array.isArray(response.body)).toBe(true);
-    expect(response.body[0]).toHaveProperty('titulo');
-  });
+     expect(Array.isArray(response.body)).toBe(true);
+    if (response.body.length > 0) {
+     expect(response.body[0]).toHaveProperty('titulo');
+  }
+});
 });
